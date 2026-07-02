@@ -7,7 +7,7 @@ import java.time.Duration;
 
 public class Init {
     //Declare the WebDriver instance
-    private WebDriver driver;
+    protected WebDriver driver;
 
     /**
      * Initialize the Chrome browser and configure Webdriver settings
@@ -25,10 +25,8 @@ public class Init {
 
     /**
      * Close the browser and end the Webdriver session
-     *
-     * @throws InterruptedException
      */
-    public void tearDown() throws InterruptedException {
+    public void tearDown() {
         //Close all browser windows and terminate the Webdriver session
         if (driver != null) {
             driver.quit();
