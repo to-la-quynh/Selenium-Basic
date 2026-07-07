@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1">
+    <test name="Ka_TestNG">
+        <packages>
+            <package name="ProjectTestNG.FirstPackage"></package>
+            <package name="ProjectTestNG.SecondPackage"></package>
+        </packages>
+    </test>
+</suite>

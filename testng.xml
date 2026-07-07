@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1">
+    <test name="Ka_TestNG">
+        <!--        Chạy theo class-->
+        <classes>
+            <class name="ProjectTestNG.FirstPackage.FirstClass">
+                <methods>
+                    <include name="firstMethod"/>
+                </methods>
+            </class>
+            <class name="ProjectTestNG.FirstPackage.SecondClass">
+                <methods>
+                    <include name="firstMethod"/>
+                </methods>
+            </class>
+            <class name="ProjectTestNG.SecondPackage.FirstClass">
+                <methods>
+                    <include name="secondMethod"/>
+                </methods>
+            </class>
+            <class name="ProjectTestNG.SecondPackage.SecondClass">
+                <methods>
+                    <include name="secondMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
