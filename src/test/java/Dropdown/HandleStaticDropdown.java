@@ -1,6 +1,7 @@
 package Dropdown;
 
 import Initialization.Init;
+import Validate.HelperValidate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -10,6 +11,7 @@ import java.util.List;
 public class HandleStaticDropdown extends Init {
     public static void main(String[] args) throws InterruptedException {
         HandleStaticDropdown test = new HandleStaticDropdown();
+        HelperValidate helperValidate = new HelperValidate();
         test.setup();
         // Navigate to Dropdown demo page
         test.driver.get("https://testing.qaautomationlabs.com/dropdown.php");
@@ -59,11 +61,13 @@ public class HandleStaticDropdown extends Init {
         //Get the currently selected option
         System.out.println(optionSelect.getFirstSelectedOption().getText());
         //Verify that the selected option is displayed correctly
-        if (result.getText().contains(optionSelect.getFirstSelectedOption().getText())) {
-            System.out.println("The correct option is selected.");
-        } else {
-            System.out.println("Incorrect option is selected.");
-        }
+//        if (result.getText().contains(optionSelect.getFirstSelectedOption().getText())) {
+//            System.out.println("The correct option is selected.");
+//        } else {
+//            System.out.println("Incorrect option is selected.");
+//        }
+
+        helperValidate.checkText(result, optionSelect.getFirstSelectedOption().getText());
 
         // Get all options from the dropdown
         List<WebElement> getAllOptions = optionSelect.getOptions();
